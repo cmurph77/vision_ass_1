@@ -1,0 +1,3 @@
+/Users/cianmurphy/vision_ass_1/cmake-build-debug/CMakeFiles/vision_ass_1.dir
+/Users/cianmurphy/vision_ass_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/cianmurphy/vision_ass_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
