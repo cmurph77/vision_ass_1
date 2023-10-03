@@ -20,12 +20,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="860481fa-d1ac-4afe-b9cd-a95e80795add" name="Changes" comment="adding images of ping pong balls">
+    <list default="true" id="860481fa-d1ac-4afe-b9cd-a95e80795add" name="Changes" comment="setting up code for starting part 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/balls/GroundTruth-BallLocationsAndDiameters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/balls/GroundTruth-BallLocationsAndDiameters.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vision_ass_1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vision_ass_1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/vision_ass_1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vision_ass_1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -40,6 +42,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "cmurph77"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ec695a32-6380-410e-b47b-bc4224f07070" />
+        <option name="url" value="https://github.com/cmurph77/vision_ass_1.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -77,9 +93,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="vision_ass_1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vision_ass_1" TARGET_NAME="vision_ass_1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="vision_ass_1" RUN_TARGET_NAME="vision_ass_1">
@@ -97,7 +113,8 @@
       <option name="presentableId" value="Default" />
       <updated>1695937349951</updated>
       <workItem from="1695937351188" duration="1638000" />
-      <workItem from="1695939000713" duration="1660000" />
+      <workItem from="1695939000713" duration="2338000" />
+      <workItem from="1696345467313" duration="5674000" />
     </task>
     <task id="LOCAL-00001" summary="youtube example files added">
       <option name="closed" value="true" />
@@ -123,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695939246065</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="setting up code for starting part 1">
+      <option name="closed" value="true" />
+      <created>1695940740210</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695940740210</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +163,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="youtube example files added" />
     <MESSAGE value="adding images of ping pong balls" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding images of ping pong balls" />
+    <MESSAGE value="setting up code for starting part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting up code for starting part 1" />
   </component>
 </project>
