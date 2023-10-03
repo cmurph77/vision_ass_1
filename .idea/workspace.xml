@@ -20,18 +20,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="860481fa-d1ac-4afe-b9cd-a95e80795add" name="Changes" comment="added in function for finding the center in orange ball">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f2f013eb0e2a6f8ca419.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-71c3e0433edddcb9f064.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-869d9389a9e9dacbb264.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-09-28T22-11-45-0943.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-vision_ass_1-Debug-c8040f0887356aa73f99.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vision_ass_1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vision_ass_1.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vision_ass_1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vision_ass_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    <list default="true" id="860481fa-d1ac-4afe-b9cd-a95e80795add" name="Changes" comment="converted for white balls. currently only ids 1 ball. using hsv color matching">
+      <change afterPath="$PROJECT_DIR$/hsv_ball_identification.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +107,7 @@
       <updated>1695937349951</updated>
       <workItem from="1695937351188" duration="1638000" />
       <workItem from="1695939000713" duration="2338000" />
-      <workItem from="1696345467313" duration="5999000" />
+      <workItem from="1696345467313" duration="6404000" />
     </task>
     <task id="LOCAL-00001" summary="youtube example files added">
       <option name="closed" value="true" />
@@ -158,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696352281925</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="converted for white balls. currently only ids 1 ball. using hsv color matching">
+      <option name="closed" value="true" />
+      <created>1696352918259</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696352918259</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +174,7 @@
     <MESSAGE value="adding images of ping pong balls" />
     <MESSAGE value="setting up code for starting part 1" />
     <MESSAGE value="added in function for finding the center in orange ball" />
-    <option name="LAST_COMMIT_MESSAGE" value="added in function for finding the center in orange ball" />
+    <MESSAGE value="converted for white balls. currently only ids 1 ball. using hsv color matching" />
+    <option name="LAST_COMMIT_MESSAGE" value="converted for white balls. currently only ids 1 ball. using hsv color matching" />
   </component>
 </project>

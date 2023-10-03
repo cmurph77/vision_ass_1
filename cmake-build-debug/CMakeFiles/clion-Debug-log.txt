@@ -7,7 +7,6 @@ CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
   CMake that the project does not need compatibility with older versions.
 
 
--- Found OpenCV: /opt/homebrew/Cellar/opencv/4.8.1 (found version "4.8.1") 
--- Configuring done (0.1s)
+-- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/cianmurphy/vision_ass_1/cmake-build-debug
