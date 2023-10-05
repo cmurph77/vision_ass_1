@@ -63,7 +63,7 @@ void pyimage_solution_orange(Mat image){
     cv::Mat hsv;
     cv::cvtColor(frame, hsv, cv::COLOR_BGR2HSV);
 
-    // Create a mask for the green color
+    // Create a mask for the orange color
     cv::Mat mask;
     cv::inRange(hsv, orangeLower, orangeUpper, mask);
 
@@ -79,6 +79,11 @@ void pyimage_solution_orange(Mat image){
     std::vector<std::vector<cv::Point>> contours;
     cv::findContours(mask.clone(), contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
 
+//     // draw contours in the green color
+//    for (size_t i = 0; i < contours.size(); ++i) {
+//        cv::drawContours(image, contours, static_cast<int>(i), cv::Scalar(0, 255, 0), 3);
+//    }
+//    cv::imshow("contours image",image);
     // Initialize the current (x, y) center of the ball
     cv::Point2f center;
 
@@ -147,6 +152,11 @@ void pyimage_solution_white(Mat image){
     std::vector<std::vector<cv::Point>> contours;
     cv::findContours(mask.clone(), contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
 
+    // draw contours in the green color
+    for (size_t i = 0; i < contours.size(); ++i) {
+        cv::drawContours(image, contours, static_cast<int>(i), cv::Scalar(0, 255, 0), 3);
+    }
+    cv::imshow("contours image",image);
     // Initialize the current (x, y) center of the ball
     cv::Point2f center;
 
