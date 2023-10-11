@@ -60,8 +60,6 @@ void iterate_through_ball_images(){
     }
 }
 
-
-
 int main() {
     cout<<"Starting Program\n";
     //iterate_through_ball_images();
