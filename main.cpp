@@ -21,7 +21,7 @@
 #include <iostream>
 #include "hsv_ball_identification.cpp"
 #include "clustering_attempt.cpp"
-#include "part_1.cpp"
+#include "part1.cpp"
 #include "part2.cpp"
 using namespace cv;
 using namespace std;
@@ -31,7 +31,7 @@ using namespace std;
 int main() {
     cout<<"Starting Program..\n";
     //iterate_through_ball_images();
-    part_1();
+    part2();
     waitKey(0);
     return 0;
 }
