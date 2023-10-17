@@ -1,1 +1,12 @@
-cmake-build-debug/
+# CMake build files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+*.txt.in
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.user
+build/
