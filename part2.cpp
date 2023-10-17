@@ -54,6 +54,7 @@ vector<Point2f> detectCorners(Mat img){
     return points;
 }
 
+
 Mat perform_blue_mask(Mat img){
     // Define the green color range
     cv::Scalar blueLower(100, 40, 30);
@@ -73,6 +74,50 @@ Mat perform_blue_mask(Mat img){
     // Perform dilations and erosions on the mask
     cv::erode(mask, mask, cv::Mat(), cv::Point(-1, -1), 2);
     cv::dilate(mask, mask, cv::Mat(), cv::Point(-1, -1), 2);
+
+    Mat blue_masked_image;
+    cv::bitwise_and(img, img, blue_masked_image, mask=mask);
+
+    return blue_masked_image;
+//    return mask;
+
+}
+
+Mat draw_mask_edges(cv::Mat& originalImage, const cv::Mat& mask) {
+    // Convert the mask to grayscale
+    cv::Mat maskGray;
+    cv::cvtColor(mask, maskGray, cv::COLOR_BGR2GRAY);
+
+    // Find edges in the mask using Canny edge detection
+    cv::Mat edges;
+    cv::Canny(maskGray, edges, 50, 150, 3);
+    imshow("edges from function",edges);
+
+    // Create a mask for the edges
+    cv::Mat edgeMask = cv::Mat::zeros(originalImage.size(), CV_8UC1);
+    edges.copyTo(edgeMask, edges);
+
+    // Convert the edge mask to 3 channels (BGR)
+    cv::Mat edgeMaskBGR;
+    cv::cvtColor(edgeMask, edgeMaskBGR, cv::COLOR_GRAY2BGR);
+
+    // Overlay the edges on the original image
+    cv::Mat result;
+    cv::addWeighted(originalImage, 0.7, edgeMaskBGR, 0.3, 0, result);
+
+    //originalImage = result;
+    return result;
+}
+
+void hsv_approach(Mat img){
+    Mat mask = perform_blue_mask(img); // TODO - FIND THE SMALLEST BOUNDING RECTANGlE
+    //imshow("Masked Image", mask);
+
+    Mat edge = draw_mask_edges(img,mask);
+    imshow("edges", edge);
+
+
+
 }
 
 void findingTableCorners(){
@@ -117,7 +162,6 @@ Mat perspectiveTransform(const std::vector<cv::Point2f>& points, cv::Mat img) {
             points[3]   // bottom-left
     };
 
-    // TODO add constants for the height and width
     cv::Point2f pts2[] = {
             cv::Point2f(0, 0),
             cv::Point2f(width, 0),
@@ -160,9 +204,7 @@ void iterate_corner_test(){
 
 void part2(){
     Mat img = imread("/Users/cianmurphy/code_directories/vision_ass_1/tables/Table4.jpg");
-    Mat mask = perform_blue_mask(img);
-    imshow("og image", img);
-    imshow("Masked Image", mask);
+    hsv_approach(img);
 //    vector<Point2f> points = detectCorners(img);
 //    drawPoints(points,img);
 //    imshow("Warped Perspective Image",perspectiveTransform(points, img));
