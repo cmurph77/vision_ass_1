@@ -20,10 +20,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="860481fa-d1ac-4afe-b9cd-a95e80795add" name="Changes" comment="wrote function to display 4 points on an image">
+    <list default="true" id="860481fa-d1ac-4afe-b9cd-a95e80795add" name="Changes" comment="added in mask edge detection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/part1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/part2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vision_ass_1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vision_ass_1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +50,9 @@
         <option name="url" value="https://github.com/cmurph77/vision_ass_1.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -84,6 +87,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -114,7 +118,8 @@
       <workItem from="1696423844860" duration="3833000" />
       <workItem from="1697032900965" duration="1031000" />
       <workItem from="1697033938493" duration="16643000" />
-      <workItem from="1697534351132" duration="2462000" />
+      <workItem from="1697534351132" duration="6677000" />
+      <workItem from="1697579248438" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="youtube example files added">
       <option name="closed" value="true" />
@@ -236,7 +241,31 @@
       <option name="project" value="LOCAL" />
       <updated>1697147429523</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="wrking on p2. just completed mask for blue table. now detect corners.">
+      <option name="closed" value="true" />
+      <created>1697579092218</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1697579092218</updated>
+    </task>
+    <task id="LOCAL-00017" summary="wrking on p2. just completed mask for blue table. now detect corners.">
+      <option name="closed" value="true" />
+      <created>1697579099276</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697579099276</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added in mask edge detection">
+      <option name="closed" value="true" />
+      <created>1697581506760</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697581506760</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +290,8 @@
     <MESSAGE value="implemented hough transform to find ball center in part1.cpp" />
     <MESSAGE value="part 1 nearly working. Just need to verify balls." />
     <MESSAGE value="wrote function to display 4 points on an image" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrote function to display 4 points on an image" />
+    <MESSAGE value="wrking on p2. just completed mask for blue table. now detect corners." />
+    <MESSAGE value="added in mask edge detection" />
+    <option name="LAST_COMMIT_MESSAGE" value="added in mask edge detection" />
   </component>
 </project>
