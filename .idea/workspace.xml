@@ -20,28 +20,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="860481fa-d1ac-4afe-b9cd-a95e80795add" name="Changes" comment="started a clustering based attempt">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vision_ass_1.iml" afterDir="false" />
+    <list default="true" id="860481fa-d1ac-4afe-b9cd-a95e80795add" name="Changes" comment="wrote function to display 4 points on an image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f3319f84c9c2137c89d3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-4d57f1499962929e4339.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d3481d9dafc7cb95750a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-10-04T12-13-21-0736.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vision_ass_1.dir/hsv_ball_identification.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vision_ass_1.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/part1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/part2.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +60,16 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2W2j0yubWeDJxt0XNEq1fN3UJfR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
@@ -97,6 +83,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -106,11 +93,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="vision_ass_1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vision_ass_1" TARGET_NAME="vision_ass_1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="vision_ass_1" RUN_TARGET_NAME="vision_ass_1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -131,6 +113,8 @@
       <workItem from="1696421600567" duration="1683000" />
       <workItem from="1696423844860" duration="3833000" />
       <workItem from="1697032900965" duration="1031000" />
+      <workItem from="1697033938493" duration="16643000" />
+      <workItem from="1697534351132" duration="2462000" />
     </task>
     <task id="LOCAL-00001" summary="youtube example files added">
       <option name="closed" value="true" />
@@ -212,7 +196,47 @@
       <option name="project" value="LOCAL" />
       <updated>1696538390785</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="started a clustering based attempt">
+      <option name="closed" value="true" />
+      <created>1697034043965</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697034043965</updated>
+    </task>
+    <task id="LOCAL-00012" summary="split out part 1 into seperate files">
+      <option name="closed" value="true" />
+      <created>1697034442587</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1697034442587</updated>
+    </task>
+    <task id="LOCAL-00013" summary="implemented hough transform to find ball center in part1.cpp">
+      <option name="closed" value="true" />
+      <created>1697109933128</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697109933128</updated>
+    </task>
+    <task id="LOCAL-00014" summary="part 1 nearly working. Just need to verify balls.">
+      <option name="closed" value="true" />
+      <created>1697138200172</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1697138200172</updated>
+    </task>
+    <task id="LOCAL-00015" summary="wrote function to display 4 points on an image">
+      <option name="closed" value="true" />
+      <created>1697147429523</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1697147429523</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +249,7 @@
     <isAutomaticFoundErrors value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="youtube example files added" />
     <MESSAGE value="adding images of ping pong balls" />
     <MESSAGE value="setting up code for starting part 1" />
@@ -232,6 +257,10 @@
     <MESSAGE value="converted for white balls. currently only ids 1 ball. using hsv color matching" />
     <MESSAGE value="split out HSV method into seperate file" />
     <MESSAGE value="started a clustering based attempt" />
-    <option name="LAST_COMMIT_MESSAGE" value="started a clustering based attempt" />
+    <MESSAGE value="split out part 1 into seperate files" />
+    <MESSAGE value="implemented hough transform to find ball center in part1.cpp" />
+    <MESSAGE value="part 1 nearly working. Just need to verify balls." />
+    <MESSAGE value="wrote function to display 4 points on an image" />
+    <option name="LAST_COMMIT_MESSAGE" value="wrote function to display 4 points on an image" />
   </component>
 </project>

@@ -27,8 +27,8 @@ void test(){
 
 }
 
-// draws 4 points on an image
-void drawPoints(std::vector<cv::Point> points, Mat img){
+// Draws 4 points on an image
+void drawPoints(vector<Point2f> points, Mat img){
     for (size_t i = 0; i < points.size(); i++){
         std::cout << "\n  - Circle: " << (i+1) << "." ;
 
@@ -40,8 +40,9 @@ void drawPoints(std::vector<cv::Point> points, Mat img){
     imshow("image",img);
 }
 
-std::vector<cv::Point> detectCorners(Mat img){
-    std::vector<cv::Point> points;
+// TODO - CORNER DETECTION NEEDS TO BE WRITTEN
+vector<Point2f> detectCorners(Mat img){
+    vector<Point2f> points;
 
     //Artificially Add points for the momment
     //1342	768	2645	833	345	3004	3963	2966
@@ -53,11 +54,27 @@ std::vector<cv::Point> detectCorners(Mat img){
     return points;
 }
 
-void part2(){
-    Mat img = imread("/Users/cianmurphy/code_directories/vision_ass_1/tables/Table4.jpg");
-    std::vector<cv::Point> points = detectCorners(img);
-    drawPoints(points,img);
+Mat perform_blue_mask(Mat img){
+    // Define the green color range
+    cv::Scalar blueLower(100, 40, 30);
+    cv::Scalar blueUpper(130,255,255);
+
+    // Apply Gaussian blur
+    //cv::GaussianBlur(img, img, cv::Size(11, 11), 0);
+
+    // Convert to HSV color space
+    cv::Mat hsv;
+    cv::cvtColor(img, hsv, cv::COLOR_BGR2HSV);
+
+    // Create a mask for the orange color
+    cv::Mat mask;
+    cv::inRange(hsv, blueLower, blueUpper, mask);
+
+    // Perform dilations and erosions on the mask
+    cv::erode(mask, mask, cv::Mat(), cv::Point(-1, -1), 2);
+    cv::dilate(mask, mask, cv::Mat(), cv::Point(-1, -1), 2);
 }
+
 void findingTableCorners(){
     Mat table_img = imread("/Users/cianmurphy/code_directories/vision_ass_1/tables/Table4.jpg");
     cv::Mat image = cv::Mat::zeros(300, 300, CV_8UC3);
@@ -83,4 +100,73 @@ void findingTableCorners(){
     cv::circle(table_img, cv::Point(bl_x, bl_y), 10, cv::Scalar(0, 0, 255), -1); // -1 for a filled circle
 
     imshow("Table 4",table_img);
+}
+
+Mat perspectiveTransform(const std::vector<cv::Point2f>& points, cv::Mat img) {
+    int height = 900;
+    int width = 500;
+    if (points.size() < 4) {
+        std::cerr << "Insufficient points for perspective transformation." << std::endl;
+        return img;
+    }
+
+    cv::Point2f pts1[] = {
+            points[0],  // top-right
+            points[1],  // top-left
+            points[2],  // bottom-right
+            points[3]   // bottom-left
+    };
+
+    // TODO add constants for the height and width
+    cv::Point2f pts2[] = {
+            cv::Point2f(0, 0),
+            cv::Point2f(width, 0),
+            cv::Point2f(0, height),
+            cv::Point2f(width, height)
+    };
+
+    cv::Mat matrix = cv::getPerspectiveTransform(pts1, pts2);
+    cv::Mat result;
+    cv::warpPerspective(img, result, matrix, cv::Size(width, height));
+
+    cv::imshow("Image", img);
+    cv::imshow("Perspective transformation", result);
+    return result;
+}
+
+void testCornerDetection(int img_no){
+    // load in image
+    string path = "/Users/cianmurphy/code_directories/vision_ass_1/tables/Table" + to_string(img_no) + ".jpg";  //
+    Mat original_img = imread(path);
+    //imshow("og",original_img);
+
+    // perform corner detection
+    std::vector<cv::Point2f> points = detectCorners(original_img);
+
+    std::cout << "\n\nThe co-ords for the corners on Image: " <<img_no<<" ";
+
+    int x; int y;
+    for(int i = 0; i < 4;i++){
+        std::cout << "\n  -> " << points[i];
+
+    }
+}
+
+void iterate_corner_test(){
+    for(int i=0; i <5; i++){
+        testCornerDetection(i+1);
+    }
+}
+
+void part2(){
+    Mat img = imread("/Users/cianmurphy/code_directories/vision_ass_1/tables/Table4.jpg");
+    Mat mask = perform_blue_mask(img);
+    imshow("og image", img);
+    imshow("Masked Image", mask);
+//    vector<Point2f> points = detectCorners(img);
+//    drawPoints(points,img);
+//    imshow("Warped Perspective Image",perspectiveTransform(points, img));
+//    testCornerDetection(1);
+//    iterate_corner_test();
+
 }

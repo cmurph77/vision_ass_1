@@ -53,10 +53,7 @@ Mat detect_color(Mat img, double x, double y, double r){
 
     if(isColorOrange(meanColorHSV)) {
         //std::cout<< "TRUE";
-         };
-
-    // Print the average color values (BGR format)
-    //std::cout << "Average color (BGR): " << meanColor[2] << ", " << meanColor[1] << ", " << meanColor[0] << ". "<< std::endl;
+    };
 
     return meanColorHSV;
 
@@ -86,22 +83,27 @@ void edge_detection(Mat img){
     // Draw circles that are detected
     for (size_t i = 0; i < detectedCircles.size(); i++){
         std::cout << "\n  - Circle: " << (i+1) << "." ;
+
+        // Get the center and radius of the circle
         cv::Point center(cvRound(detectedCircles[i][0]), cvRound(detectedCircles[i][1])); // firse two vals in circle vector is corrds
         int radius = cvRound(detectedCircles[i][2]); // third value is radius
 
-        // Draw the circumference of the circle
+        // Draw the circumference of the circle on the original image
         cv::circle(img, center, radius, cv::Scalar(0, 255, 0), 2);
 
-        // Draw a small circle (of radius 1) to show the center
+        // Draw a small dot to show the center on the original image
         cv::circle(img, center, 1, cv::Scalar(0, 0, 255), 3);
         std::cout << "\n      -> Center : (" << center.x << ", " << center.y << ")" ;
 
+        // Get the average color of the Ball ie the area of the circle.
         cv::Mat hsvBallColor = detect_color(img,center.x,center.y,radius);
+
+        // Check to see if the detected circles are orange or white
         bool orange = isColorOrange(hsvBallColor);
         if(orange){
             std::cout << "\n      -> Ball is Orange" << (i + 1); }
         bool white = isColorWhite(hsvBallColor);
-        if(orange){
+        if(white){
             std::cout << "\n      -> Ball is White" << (i + 1); }
 
 
@@ -129,14 +131,13 @@ void iterate_through_ball_images(){
 }
 
 //void ball_detection_test(){
-//    string path = "/Users/cianmurphy/code_directories/vision_ass_1/balls/Ball8.jpg";  // TODO add a constant for the start of the path
+//    string path = "/Users/cianmurphy/code_directories/vision_ass_1/balls/Ball8.jpg";
 //    Mat img = imread(path);
 //    detect_color(img,523.5,	458.5	,61/2);
 //
 //}
 
 void part_1(){
-    //todo back project the circle and verify if white or orange?
     iterate_through_ball_images();
     //find_center(9);
     //ball_detection_test();
