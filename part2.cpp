@@ -113,8 +113,9 @@ void hsv_approach(Mat img){
     Mat mask = perform_blue_mask(img); // TODO - FIND THE SMALLEST BOUNDING RECTANGlE
     //imshow("Masked Image", mask);
 
-    Mat edge = draw_mask_edges(img,mask);
-    imshow("edges", edge);
+//    Mat edge = draw_mask_edges(img,mask);
+//    imshow("edges", edge);
+    drawPoints(detectCorners(mask),mask);
 
 
 

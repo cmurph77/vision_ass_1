@@ -10,3 +10,4 @@ Makefile
 *.sln
 *.user
 build/
+cmake-build-debug/

@@ -1,4 +1,5 @@
 
+// TODO MERGE WHITE OR ORANGE COLOR DETECTION
 bool isColorOrange(cv::Mat hsv_color) {
     // Define the lower and upper bounds for the orange color in HSV space
     cv::Scalar orangeLower(15, 100, 100);  // Lower bound for orange in HSV
@@ -29,6 +30,14 @@ bool isColorWhite(cv::Mat hsv_color) {
     return cv::countNonZero(mask) > 0;
 }
 
+/**
+ * @brief this function detects the color in th
+ *
+ * @param img
+ * @param x,y - coords for the ball
+ * @param r  - radius of the ball
+ * @return  Returns the color inside the circle
+ */
 Mat detect_color(Mat img, double x, double y, double r){
     cv::Point center(x, y); // create point object for circle center
     // Draw the circumference of the circle
@@ -60,8 +69,7 @@ Mat detect_color(Mat img, double x, double y, double r){
 }
 
 // TODO -> return the coords and center from this function
-void edge_detection(Mat img){
-    //imshow("origninal image",img);
+void find_ball_center(Mat img){
 
     // Convert to grayscale
     cv::Mat gray;
@@ -73,8 +81,8 @@ void edge_detection(Mat img){
     cv::blur(gray, grayBlurred, cv::Size(blur_matrix, blur_matrix));
 
     // Apply Hough transform on the blurred image
-    int maxBallRadius = 100;
-    int minDist = grayBlurred.rows / 8;
+    int maxBallRadius = 100;  // arbitruarily set
+    int minDist = grayBlurred.rows / 8; // mimium distance between circle centers
     std::vector<cv::Vec3f> detectedCircles; // store the detected circles here
     cv::HoughCircles(grayBlurred, detectedCircles, cv::HOUGH_GRADIENT, 1,
                      minDist,  // change this value to detect circles with different distances to each other
@@ -112,34 +120,32 @@ void edge_detection(Mat img){
 
 }
 
-
-
 //This function returns the mean color of the circle in the image supplied
-void find_center(int image_no){
+void find_center_handler(int image_no){
     string path = "/Users/cianmurphy/code_directories/vision_ass_1/balls/Ball" + to_string(image_no) + ".jpg";  // TODO add a constant for the start of the path
     Mat ball_img = imread(path); // read in ball image from the path
     //imshow("Ball " + to_string(image_no)+"  Image" ,ball_img);  // display original image
-    edge_detection(ball_img);
+    find_ball_center(ball_img);
 
 }
 
 void iterate_through_ball_images(){
     for (int i = 1; i < 10; ++i) {
         std::cout << "\n\nImage " << i << "";
-        find_center(i);
+        find_center_handler(i);
     }
 }
 
-//void ball_detection_test(){
-//    string path = "/Users/cianmurphy/code_directories/vision_ass_1/balls/Ball8.jpg";
-//    Mat img = imread(path);
-//    detect_color(img,523.5,	458.5	,61/2);
-//
-//}
+void ball_detection_test(){
+    string path = "/Users/cianmurphy/code_directories/vision_ass_1/balls/Ball8.jpg";
+    Mat img = imread(path);
+    detect_color(img,523.5,	458.5	,61/2);
+
+}
 
 void part_1(){
     iterate_through_ball_images();
-    //find_center(9);
+    //find_center_handler(9);
     //ball_detection_test();
 
 }
